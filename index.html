@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="EI=edge">
+    <meta name="theme-color" content="#19a29a">
+    <meta name="description"
+        content="descubre la variedad de accesorios para hombres y mujeres Conseguirás collares, pulseras, tobilleras y aritos para todos los gustos">
+    <title>Toya Bijou | Accesorios </title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="../imagenes/logos
+    
+    verde.png" href="imagenes/logoverde.png">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navBar">
+            <div class="infoNavRegistro">
+                <p class="textNavRegistro">¡registrate para recibir ofertas semanales!</p>
+            </div>
+
+            <section class="sectionNavBar">
+                <div>
+                    <a href="#"><img class="navLogo" src="../imagenes/navlogo.png"
+                            alt="logo de Toya Bijou"></a>
+                </div>
+
+                <!-- DISPLAY NONE TEMPORAL -->
+                <div class="divListNavBar" style="display: none;">
+                    <ul class="listNavBar">
+                        <li class="itemListNav"> <a class="linkNavBar" href="../html/productos.html">
+                                Todos Nuestros Productos</a></li>
+                        <li class="itemListNav"> <a class="linkNavBar" href="../html/pulseras.html">
+                                Pulseras</a></li>
+                        <li class="itemListNav"> <a class="linkNavBar" href="../html/pulserablanca.html">
+                                Pulsera Blanca</a></li>
+                    </ul>
+                </div>
+
+                <div class="divListNavBar">
+
+                    <ul class="listNavBar">
+                        <li id="accesoCarrito" class="itemListNav"><img class="carrito" src="imagenes/carrito.png"
+                                alt="carrito"></li>
+                        <dialog id="carrito" class="modalCarrito">
+                            <!-- <section class="sectionCarrito">
+                                <p class="textCarritoVacio">los productos que agregues al carrito se mostrarán acá</p>
+                                <div>
+
+                                    <img class="imagenEncontrar" src="imagenes/encontrar.png" alt="encontrar">
+                                    <p class="textCarritoVacio">tu carrito está vacío</p>
+                                    <button class="findProducts">encontrar productos <img class="imgFindProducts"
+                                            src="imagenes/lupa.png" alt="lupa"></button>
+
+                                </div>
+
+
+                                <button id="cerrarCarrito" class="btnCancelCar">cerrar</button> -->
+                        </dialog>
+
+
+                        <!-- DISPLAY NONE TEMPORAL -->
+                        <li id="registro" class="itemListNav" style="display: none;">Registrate</li>
+                        <dialog id="ventana" class="modalRegistro">
+                            <section>
+                                <h2 class="titleModalRegistro">¡Completa tu registro!</h2>
+                                <p class="textModal">¡Recibe ofertas especiales, promociones de lanzamiento, accede
+                                    antes a los nuevos
+                                    modelos y más en un paso! </p>
+                                <span class="arrowModal"><img class="imgArrowModal" src="imagenes/flechacurva.png"
+                                        alt=""></span>
+                                <div class="divModalRegistro">
+                                    <label class="labelRegistro">Nombre
+                                        <input class="inputRegistro" type="text" name="name" placeholder="Nombre"
+                                            autocomplete="off" required>
+                                    </label>
+                                </div>
+                                <div class="divModalRegistro">
+                                    <label class="labelRegistro">Email
+                                        <input class="inputRegistro" type="email" name="name" autocomplete="off"
+                                            placeholder="persona@mail.com" required>
+                                    </label>
+                                </div>
+                                <div class="divModalRegistro">
+                                    <label class="labelRegistro" for="why">Condición fiscal
+
+                                        <select name="why" id="why">
+                                            <option>Consumidor final</option>
+                                            <option>Responsable inscripto</option>
+                                            <option>iva exento</option>
+                                            <option>Monotributista</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="divModalButton">
+                                    <button id="ModalCls" class="buttonModalCancel">cancelar</button>
+                                    <button class="buttonModalRegistro">Registrarme</button>
+                                </div>
+                            </section>
+                        </dialog>
+
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="sectionProgressBar">
+            <!-- DISPLAY NONE TEMPORAL -->
+            <div class="progressBarContainer" style="display: none;">
+                <p style="margin: 0px;">total:</p>
+                <p style="margin: 0px;" id="progressBarTotal">$0</p>
+                <div class="progressBarIlustration">
+
+                    <div class="progressBarVisual"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- DISPLAY NONE TEMPORAL -->
+        <section class="sectionPresentacion" style="display: none;">
+            <div class="divPresentacionTexto">
+                <h2>
+                    ¡Encuentra tu proximo accesorio, con la mejor calidad y al mejor precio!
+                </h2>
+                <h3>
+                    Recibe ofertas cada semana, promociones de lanzamiento, descuentos a partir de 5 unidades y más!
+                </h3>
+                <div class="presentacionDescuento">
+                    <p class="desc1">15%</p>
+                    <p class="desc2">30%</p>
+                    <p class="desc3">2x1</p>
+                    <p class="desc4">3x2</p>
+                    <p class="desc5">50%</p>
+                </div>
+            </div>
+
+            <div class="divPresentacionImagenes">
+                <img class="imgind" src="../imagenes/001C-collar-color.jpeg" alt="">
+                <img class="imgind" src="../imagenes/001P-pulsera-ojo-CLS.jpeg" alt="">
+                <img class="imgind" src="../imagenes/002C-collar-cara.jpeg" alt="">
+                <img class="imgind" src="../imagenes/005C-collar-rojbln-CLS.jpeg" alt="">
+                <img class="imgind" src="../imagenes/003C-collar-inter.jpeg" alt="">
+                <img class="imgind" src="../imagenes/006C-collar-carazul-CLS.jpeg" alt="">
+            </div>
+        </section>
+
+        <div class="titulos">
+            <h4 class="titulo">¡Realiza tu Compra!</h4>
+            <p class="descripciones">Seguí los pasos y realiza tu compra con las mejores <strong>promociones</strong>
+            </p>
+        </div>
+
+        <section class="sectionComprar">
+
+            <div class="divComprar">
+                <ul class="ListComprar">
+                    <span class="span2"></span>
+                    <li class="liListComprar">Encuentra tu Producto <img class="imageSectCompra" src="imagenes/lupa.png"
+                            alt="lupa"></li>
+                    <img class="siguiente" src="imagenes/arrow.png" alt="flecha">
+                    <li class="liListComprar">Agregalo al Carrito <img class="imageSectCompra" src="imagenes/car.png"
+                            alt="Carrito"></li>
+                    <img class="siguiente" src="imagenes/arrow.png" alt="flecha">
+                    <li class="liListComprar">¡Finaliza tu Compra! <img class="imageSectCompra" src="imagenes/check.png"
+                            alt="finalizar compra"></li>
+                    <span class="span2"></span>
+                </ul>
+            </div>
+
+
+
+
+
+
+            <div id="compraDirecta" class="compraDirecta"> </div>
+<!--     ESTE ESTÁ DE EJEMPLO PARA UNA PRUEBA NO ES ORIGINAL DEL DISEÑO ELIMINAR PARA QUE QUEDE BIEN
+                <section id="modalOpnCompraDirecta1" class="modalOpnCompraDirecta">
+                    <div class="divModalOpnCompraDirecta">
+                        <span id="btn-prev1" class="botonPrev"><img class="chevron"
+                                src="imagenes/chevronleft.png" alt=""></span>
+                        <img id="imgModalCompraDirecta1" class="imgDinamicCompraDirect1"
+                            src="imagenes/004C-collar-caracolor-CLS.jpeg" alt="pulsera de colores">
+                        <img id="imgModalCompraDirecta1" class="imgDinamicCompraDirect1"
+                            src="imagenes/004C-collar-caracolor.jpeg" alt="pulsera de colores"
+                            style="display: none;">
+                        <span id="btn-next1" class="botonNext"><img src="imagenes/chevronright.png"
+                                alt=""></span>
+                    </div>
+                    <div class="infoModalCompraDirecta">
+
+                        <p id="porcentajeDescuento1" class="porcentajeDescuento"></p>
+                        <p id="promocion1" class="promocionModal"></p>
+                        <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                        <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                        <p class="materialProduct">material</p>
+                        <p class="partesProduct">Hilo: elástico 1mm</p>
+                        <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                        <p class="partesProduct">Diametro: 15cm</p>
+                        <p id="precioProducto1" class="precioProduct01">5400</p>
+                    </div>
+                    <div class="divBtnCompraDirecta">
+                        <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                        <button id="ClsCompraDirect1" class="btnModalCerrarCompraDirecta">cerrar</button>
+                    </div>
+                </section> -->
+
+        
+                <!-- <div id="modalCompraDirecta0" class="productCompraDirect linkCompraDirect">
+                    <img class="imgCompraDirect" src="imagenes/001P-pulsera-ojo-CLS.jpeg" alt="pulsera de colores">
+                    <p class="textCompraDirect">$ 7.750</p>
+
+                    <button class="buttonCompraDirect">Agregar</button>
+                    <dialog id="modalOpnCompraDirecta" class="modalOpnCompraDirecta">
+                        <section>
+                            <div class="divModalOpnCompraDirecta">
+                                <span id="btn-prev" class="botonPrev"><img class="chevron"
+                                        src="imagenes/chevronleft.png" alt=""></span>
+                                <img id="imgModalCompraDirecta" class="imgDinamicCompraDirect"
+                                    src="imagenes/001P-pulsera-ojo-CLS.jpeg" alt="pulsera de colores">
+                                <img id="imgModalCompraDirecta" class="imgDinamicCompraDirect"
+                                    src="imagenes/001P-pulsera-ojo.jpeg" alt="pulsera de colores"
+                                    style="display: none;">
+                                <span id="btn-next" class="botonNext"><img src="imagenes/chevronright.png"
+                                        alt=""></span>
+                            </div>
+                            <div class="infoModalCompraDirecta">
+
+                                <p id="porcentajeDescuento" class="porcentajeDescuento"></p>
+                                <p id="promocion" class="promocionModal"></p>
+
+
+                                <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                                <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                                <p class="materialProduct">material</p>
+                                <p class="partesProduct">Hilo: elástico 1mm</p>
+                                <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                                <p class="partesProduct">Diametro: 15cm</p>
+                                <p id="precioProducto" class="precioProduct">7750</p>
+                            </div>
+                            <div class="divBtnCompraDirecta">
+                                <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                                <button id="ClsCompraDirect0" class="btnModalCerrarCompraDirecta">cerrar</button>
+                            </div>
+                        </section>
+                    </dialog>
+                </div>
+ -->
+
+
+
+
+
+
+
+                <!-- 
+
+
+                <div id="modalCompraDirecta1" class="productCompraDirect linkCompraDirect">
+                    <img class="imgCompraDirect" src="imagenes/004C-collar-caracolor-CLS.jpeg" alt="pulsera de colores">
+                    <p class="textCompraDirect">$ 5.400</p>
+
+                    <button class="buttonCompraDirect">Agregar</button>
+                    <dialog id="modalOpnCompraDirecta1" class="modalOpnCompraDirecta">
+                        <section>
+                            <div class="divModalOpnCompraDirecta">
+                                <span id="btn-prev1" class="botonPrev"><img class="chevron"
+                                        src="imagenes/chevronleft.png" alt=""></span>
+                                <img id="imgModalCompraDirecta1" class="imgDinamicCompraDirect1"
+                                    src="imagenes/004C-collar-caracolor-CLS.jpeg" alt="pulsera de colores">
+                                <img id="imgModalCompraDirecta1" class="imgDinamicCompraDirect1"
+                                    src="imagenes/004C-collar-caracolor.jpeg" alt="pulsera de colores"
+                                    style="display: none;">
+                                <span id="btn-next1" class="botonNext"><img src="imagenes/chevronright.png"
+                                        alt=""></span>
+                            </div>
+                            <div class="infoModalCompraDirecta">
+
+                                <p id="porcentajeDescuento1" class="porcentajeDescuento"></p>
+                                <p id="promocion1" class="promocionModal"></p>
+                                <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                                <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                                <p class="materialProduct">material</p>
+                                <p class="partesProduct">Hilo: elástico 1mm</p>
+                                <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                                <p class="partesProduct">Diametro: 15cm</p>
+                                <p id="precioProducto1" class="precioProduct01">5400</p>
+                            </div>
+                            <div class="divBtnCompraDirecta">
+                                <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                                <button id="ClsCompraDirect1" class="btnModalCerrarCompraDirecta">cerrar</button>
+                            </div>
+                        </section>
+                    </dialog>
+                </div> -->
+
+                
+
+
+
+
+
+
+
+
+
+                <!-- 
+
+
+
+                <div id="modalCompraDirecta2" class="productCompraDirect linkCompraDirect">
+                    <img class="imgCompraDirect" src="imagenes/002C-collar-cara-CLS.jpeg" alt="pulsera de colores">
+                    <p class="textCompraDirect">$ 6.000</p>
+
+                    <button class="buttonCompraDirect">Agregar</button>
+                    <dialog id="modalOpnCompraDirecta2" class="modalOpnCompraDirecta">
+                        <section>
+                            <div class="divModalOpnCompraDirecta">
+                                <span id="btn-prev2" class="botonPrev"><img class="chevron"
+                                        src="imagenes/chevronleft.png" alt=""></span>
+                                <img id="imgModalCompraDirecta2" class="imgDinamicCompraDirect2"
+                                    src="imagenes/002C-collar-cara-CLS.jpeg" alt="pulsera de colores">
+                                <img id="imgModalCompraDirecta2" class="imgDinamicCompraDirect2"
+                                    src="imagenes/002C-collar-cara.jpeg" alt="pulsera de colores"
+                                    style="display: none;">
+                                <span id="btn-next2" class="botonNext"><img src="imagenes/chevronright.png"
+                                        alt=""></span>
+                            </div>
+                            <div class="infoModalCompraDirecta">
+
+                                <p id="porcentajeDescuento2" class="porcentajeDescuento"></p>
+                                <p id="promocion2" class="promocionModal"></p>
+                                <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                                <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                                <p class="materialProduct">material</p>
+                                <p class="partesProduct">Hilo: elástico 1mm</p>
+                                <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                                <p class="partesProduct">Diametro: 15cm</p>
+                                <p id="precioProducto2" class="precioProduct01">6000</p>
+                            </div>
+                            <div class="divBtnCompraDirecta">
+                                <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                                <button id="ClsCompraDirect2" class="btnModalCerrarCompraDirecta">cerrar</button>
+                            </div>
+                        </section>
+                    </dialog>
+                </div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div id="modalCompraDirecta3" class="productCompraDirect linkCompraDirect">
+                    <img class="imgCompraDirect" src="imagenes/002P-pulsera-color-CLS.jpeg" alt="pulsera de colores">
+                    <p class="textCompraDirect">$ 8.000</p>
+
+                    <button class="buttonCompraDirect">Agregar</button>
+                    <dialog id="modalOpnCompraDirecta3" class="modalOpnCompraDirecta">
+                        <section>
+                            <div class="divModalOpnCompraDirecta">
+                                <span id="btn-prev3" class="botonPrev"><img class="chevron"
+                                        src="imagenes/chevronleft.png" alt=""></span>
+                                <img id="imgModalCompraDirecta3" class="imgDinamicCompraDirect3"
+                                    src="imagenes/002P-pulsera-color-CLS.jpeg" alt="pulsera de colores">
+                                <img id="imgModalCompraDirecta3" class="imgDinamicCompraDirect3"
+                                    src="imagenes/002P-pulsera-color.jpeg" alt="pulsera de colores"
+                                    style="display: none;">
+                                <span id="btn-next3" class="botonNext"><img src="imagenes/chevronright.png"
+                                        alt=""></span>
+                            </div>
+                            <div class="infoModalCompraDirecta">
+
+                                <p id="porcentajeDescuento3" class="porcentajeDescuento"></p>
+                                <p id="promocion3" class="promocionModal"></p>
+                                <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                                <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                                <p class="materialProduct">material</p>
+                                <p class="partesProduct">Hilo: elástico 1mm</p>
+                                <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                                <p class="partesProduct">Diametro: 15cm</p>
+                                <p id="precioProducto3" class="precioProduct01">8000</p>
+                            </div>
+                            <div class="divBtnCompraDirecta">
+                                <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                                <button id="ClsCompraDirect3" class="btnModalCerrarCompraDirecta">cerrar</button>
+                            </div>
+                        </section>
+                    </dialog>
+                </div>
+
+ -->
+
+
+
+
+
+
+
+
+                <!-- 
+
+
+
+
+                <div id="modalCompraDirecta4" class="productCompraDirect linkCompraDirect">
+                    <img class="imgCompraDirect" src="imagenes/004C-collar-caracolor-CLS.jpeg" alt="pulsera de colores">
+                    <p class="textCompraDirect">$ 6.450</p>
+
+                    <button class="buttonCompraDirect">Agregar</button>
+                    <dialog id="modalOpnCompraDirecta4" class="modalOpnCompraDirecta">
+                        <section>
+                            <div class="divModalOpnCompraDirecta">
+                                <span id="btn-prev4" class="botonPrev"><img class="chevron"
+                                        src="imagenes/chevronleft.png" alt=""></span>
+                                <img id="imgModalCompraDirecta4" class="imgDinamicCompraDirect4"
+                                    src="imagenes/004C-collar-caracolor-CLS.jpeg" alt="pulsera de colores">
+                                <img id="imgModalCompraDirecta4" class="imgDinamicCompraDirect4"
+                                    src="imagenes/004C-collar-caracolor.jpeg" alt="pulsera de colores"
+                                    style="display: none;">
+                                <span id="btn-next4" class="botonNext"><img src="imagenes/chevronright.png"
+                                        alt=""></span>
+                            </div>
+                            <div class="infoModalCompraDirecta">
+
+                                <p id="porcentajeDescuento4" class="porcentajeDescuento"></p>
+                                <p id="promocion4" class="promocionModal"></p>
+                                <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                                <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                                <p class="materialProduct">material</p>
+                                <p class="partesProduct">Hilo: elástico 1mm</p>
+                                <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                                <p class="partesProduct">Diametro: 15cm</p>
+                                <p id="precioProducto4" class="precioProduct01">6450</p>
+                            </div>
+                            <div class="divBtnCompraDirecta">
+                                <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                                <button id="ClsCompraDirect4" class="btnModalCerrarCompraDirecta">cerrar</button>
+                            </div>
+                        </section>
+                    </dialog>
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div id="modalCompraDirecta5" class="productCompraDirect linkCompraDirect">
+                    <img class="imgCompraDirect" src="imagenes/006C-collar-carazul-CLS.jpeg" alt="pulsera de colores">
+                    <p class="textCompraDirect">$ 8.200</p>
+
+                    <button class="buttonCompraDirect">Agregar</button>
+                    <dialog id="modalOpnCompraDirecta5" class="modalOpnCompraDirecta">
+                        <section>
+                            <div class="divModalOpnCompraDirecta">
+                                <span id="btn-prev5" class="botonPrev"><img class="chevron"
+                                        src="imagenes/chevronleft.png" alt=""></span>
+                                <img id="imgModalCompraDirecta" class="imgDinamicCompraDirect5"
+                                    src="imagenes/006C-collar-carazul-CLS.jpeg" alt="pulsera de colores">
+                                <img id="imgModalCompraDirecta2" class="imgDinamicCompraDirect5"
+                                    src="imagenes/006C-collar-carazul.jpeg" alt="pulsera de colores"
+                                    style="display: none;">
+                                <span id="btn-next5" class="botonNext"><img src="imagenes/chevronright.png"
+                                        alt=""></span>
+                            </div>
+                            <div class="infoModalCompraDirecta">
+
+                                <p id="porcentajeDescuento5" class="porcentajeDescuento"></p>
+                                <p id="promocion5" class="promocionModal"></p>
+                                <img class="imgModalDeco" src="imagenes/deco.png" alt="decoracion">
+                                <h3 class="nameProduct">Pulsera de ojo turco</h3>
+                                <p class="materialProduct">material</p>
+                                <p class="partesProduct">Hilo: elástico 1mm</p>
+                                <p class="partesProduct">Piedras: vidrio, acero y plastico</p>
+                                <p class="partesProduct">Diametro: 15cm</p>
+                                <p id="precioProducto5" class="precioProduct01">8200</p>
+                            </div>
+                            <div class="divBtnCompraDirecta">
+                                <button class="btnModalAgregarCompraDirecta">Agregar</button>
+                                <button id="ClsCompraDirect5" class="btnModalCerrarCompraDirecta">cerrar</button>
+                            </div>
+                        </section>
+                    </dialog> -->
+
+
+            
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- DISPLAY NONE TEMPORAL -->
+        <div class="titulos" style="display: none;">
+            <h4 class="titulo">¡Nuestros Productos!</h4>
+            <h2 class="descripciones">Conoce los productos que fabricamos</h2>
+        </div>
+
+        <!-- DISPLAY NONE TEMPORAL -->
+        <section class="sectionInformacion" style="display: none;">
+            <div class="divSectionInformacion">
+                <div class="divAccesosInformacion">
+                    <a class="linkInformacion" href="pulseras.html">
+                        <img class="imgInformacion" src="../imagenes/002C-collar-cara-CLS.jpeg"
+                            alt="pulsera de colores">
+                        <h5 class="titleInformacion">COLLARES</h5>
+                        <p class="textInformacion">Encuentralos a partir de </br><strong>$3.500</strong></p>
+                    </a>
+                </div>
+
+                <div class="divAccesosInformacion">
+                    <a class="linkInformacion" href="pulseras.html">
+                        <img class="imgInformacion" src="../imagenes/002P-pulsera-color-CLS.jpeg"
+                            alt="pulsera de colores">
+                        <h5 class="titleInformacion">PULSERAS</h5>
+                        <p class="textInformacion">Encuentralos a partir de </br><strong>$2.000</strong></p>
+                    </a>
+                </div>
+
+                <div class="divAccesosInformacion">
+                    <a class="linkInformacion" href="pulseras.html">
+                        <img class="imgInformacion" src="../imagenes/004C-collar-caracolor-CLS.jpeg"
+                            alt="pulsera de colores">
+                        <h5 class="titleInformacion">TOBILLERAS</h5>
+                        <p class="textInformacion">Encuentralos a partir de </br><strong>$1.800</strong></p>
+                    </a>
+                </div>
+
+                <div class="divAccesosInformacion">
+                    <a class="linkInformacion" href="pulseras.html">
+                        <img class="imgInformacion" src="../imagenes/005C-collar-rojbln-CLS.jpeg"
+                            alt="pulsera de colores">
+                        <h5 class="titleInformacion">ARITOS</h5>
+                        <p class="textInformacion">Encuentralos a partir de </br><strong>$5.000</strong></p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="divSectionInformacionAdicionalImg" data-aos="fade-left" data-aos-offset="300"
+                data-aos-easing="ease-in-sine" data-aos-duration="300" class="divSectionInformacion">
+                <img class="imgInfoAdicionalDeco" src="../imagenes/006C-collar-carazul-CLS.jpeg"
+                    alt="imagen de pulsera">
+                <img class="imgInfoAdicionalDeco" src="../imagenes/logo13.png" alt="imagen de pulsera">
+                <img class="imgInfoAdicionalDeco" src="../imagenes/001C-collar-color-CLS.jpeg" alt="imagen de pulsera">
+            </div>
+        </section>
+
+        <div class="titulos2">
+            <h4 class="titulo2">¡Conoce más!</h4>
+            <p class="descripciones2">Detalles de envíos, ideal para... y nuestras redes</p>
+        </div>
+
+
+
+        <section class="detalleEnvios">
+            <div class="divSectionInformacionAdicional">
+                <span><img class="direccion1" src="imagenes/flechacurva.png" alt=""></span>
+                <span><img class="direccion2" src="imagenes/flechacurva.png" alt=""></span>
+                <span><img class="direccion3" src="imagenes/flechacurva.png" alt=""></span>
+
+                <div class="zona1">
+                    <h4 class="titleInfoAdicional">¡Recibelo de acuerdo a tu comodidad!</h4>
+                    <ul class="listInfoAdicional">
+                        <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/casa.png" alt="">En tu
+                            domicilio</li>
+                        <p class="txtListRegalos">El costo será calculado según la ubicación de domicilio</p>
+                        <li class="listRegalos"> <img class="imgListRegalos" src="../imagenes/envio.png"
+                                alt="imagen de camion">Correo Postal</li>
+                        <p class="txtListRegalos">Podes elegir donde retirarlos asumiendo el costo que conlleve </p>
+                    </ul>
+                </div>
+
+                <div class="zona2">
+                    <h4 class="titleInfoAdicional">Ideal para...</h4>
+                    <ul class="listInfoAdicional">
+                        <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/regalo.png" alt="">Regalos
+                        </li>
+                        <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/souve.png" alt="">Souvenirs
+                        </li>
+                        <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/personal.png" alt="">Uso
+                            personal</li>
+                        <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/corazon.png" alt="">¡Y
+                            lo que
+                            quieras!</li>
+                    </ul>
+                </div>
+
+                <div class="zona3">
+                    <h4 class="titleInfoAdicional">¡Siguenos en nuestras redes!</h4>
+                    <ul class="listInfoAdicional">
+                        <a href="#">
+                            <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/instagram.png"
+                                    alt="">toyabijou</li>
+                        </a>
+                        <a href="#">
+                            <li class="listRegalos"><img class="imgListRegalos" src="../imagenes/facebook.png"
+                                    alt="">Toya
+                                Bijou</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="sectionProveedor">
+            <div class="titulos">
+                <h4 class="titulo">¿Quieres ser distribuidor?</h4>
+                <h2 class="descripciones">Contactate con nosotros y conoce lo que tenemos para ti</h2>
+                <h4 class="infoTitles">¡inicia el chat con nosotros!</h4>
+            </div>
+        </section> -->
+    </main>
+
+
+
+    <footer class="FooterSection">
+        <section class="sectionFooter">
+            <div class="footerOptions">
+                <img class="imgFooter" src="../imagenes/logoblanco.jpg" alt="">
+            </div>
+            <ul class="footerOptions">
+                <li class="footerOptionsText">preguntas frecuentes</li>
+                <li class="footerOptionsText">¿cómo comprar?</li>
+                <li class="footerOptionsText">¿queres ser distribuidor?</li>
+            </ul>
+
+            <ul class="footerOptions">
+                <li class="footerOptionsText">atención al cliente</li>
+                <li class="footerOptionsText">información comercial</li>
+                <li class="footerOptionsText">terminos y condiciones</li>
+            </ul>
+
+            <ul class="footerOptions">
+                <li class="footerOptionsText">ayudanos a mejorar</li>
+                <li class="footerOptionsText">sé parte de nuestro equipo</li>
+                <li class="footerOptionsText">capacitate para ser creador</li>
+            </ul>
+        </section>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script> AOS.init(); </script>
+<script src="javaScript/functions.js"></script>
+
+</html>

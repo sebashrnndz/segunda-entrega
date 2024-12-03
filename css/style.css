@@ -1,0 +1,960 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif !important;
+}
+
+html {
+  background-color: rgb(206, 206, 206);
+}
+
+p {
+  font-weight: 200;
+}
+
+.navBar .infoNavRegistro {
+  background-color: #19A29A;
+  height: 1.3rem;
+}
+.navBar .infoNavRegistro .textNavRegistro {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 350;
+  text-align: center;
+}
+.navBar .navLogo {
+  width: 100px;
+  cursor: auto;
+}
+.navBar .sectionNavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+  border-bottom: 1px solid rgba(25, 162, 153, 0.2117647059);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(25, 162, 154, 0.06);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(25, 162, 154, 0.06);
+  box-shadow: 0px 10px 10px 0px rgba(25, 162, 154, 0.06);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  color: #19A29A;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 450;
+  margin: 0rem 1.5rem;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carrito {
+  width: 23px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carrito:hover {
+  cursor: pointer;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-radius: 10px;
+  border: 1px solid #3d3d3d;
+  margin: 5px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .textCarritoVacioTitulos {
+  color: #3d3d3d;
+  width: 100%;
+  margin: 0rem 0.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .textCarritoVacioTitulos {
+  font-weight: 500;
+  font-size: 16px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav {
+  border: none;
+  justify-content: center;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2rem;
+  position: fixed;
+  width: 60%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  border: none;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  transition: 0.3s;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnFinalizarCompra {
+  border: 2px solid #19A29A;
+  padding: 0.2rem 1rem;
+  width: 50%;
+  color: #19A29A;
+  background-color: #ffffff;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 400;
+  transition: ease-in-out 0.2s;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnFinalizarCompra:hover {
+  background-color: rgba(25, 162, 153, 0.0941176471);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnCancelCar {
+  background-color: #ffffff;
+  color: rgba(61, 61, 61, 0.4509803922);
+  border: none;
+  border-radius: 10px;
+  padding: 0.2rem;
+  width: 40%;
+  font-size: 12px;
+  transition: 0.3s;
+  background-color: rgba(177, 177, 177, 0.0745098039);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnCancelCar:hover {
+  background-color: rgba(177, 177, 177, 0.2274509804);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .modalCarrito .sectionCarrito .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .carritoConProductosNav .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .modalCarrito .sectionCarrito .textCarritoVacioTitulos {
+  color: rgba(61, 61, 61, 0.4509803922);
+  font-weight: 400;
+  font-size: 14px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .findProducts {
+  background-color: #e1e1e1;
+  padding: 5px 10px;
+  color: #6b6b6b;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .findProducts:hover {
+  background-color: #d6d6d6;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .findProducts .imgFindProducts {
+  width: 20px;
+  transform: rotate(90deg);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .itemListNav {
+  color: #19A29A;
+  font-size: 14px;
+  font-weight: 450;
+  margin: 0rem 1.5rem;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .itemListNav:hover {
+  cursor: pointer;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .itemListNav .linkNavBar {
+  color: #19A29A;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 450;
+  margin: 0rem 1.5rem;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2rem;
+  position: fixed;
+  width: 35%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  border: none;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .textModal {
+  color: #19A29A;
+  font-weight: 400;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .arrowModal {
+  position: absolute;
+  right: 25.5rem;
+  top: 7rem;
+  transform: rotate(210deg);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .arrowModal .imgArrowModal {
+  width: 40px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .titleModalRegistro {
+  border-bottom: 2px solid #19A29A;
+  border-top: 2px solid #19A29A;
+  padding: 0.5rem;
+  color: #3d3d3d;
+  font-size: 18px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro {
+  margin: 1rem;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro .labelRegistro {
+  color: #3d3d3d;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(25, 162, 153, 0.1176470588);
+  width: 100%;
+  border-radius: 10px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro .labelRegistro .inputRegistro, .navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro .labelRegistro #why {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  background-color: rgba(25, 162, 153, 0.0941176471);
+  width: 60%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalRegistro {
+  width: 50%;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #19A29A;
+  border: 2px solid #19A29A;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  transition: 0.3s;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalRegistro:hover {
+  background-color: rgba(25, 162, 153, 0.8);
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalCancel {
+  width: 30%;
+  padding: 3px;
+  color: #3d3d3d;
+  background: #ffffff;
+  border: 2px solid #3d3d3d;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  transition: 0.3s;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalCancel:hover {
+  background-color: rgba(25, 162, 153, 0.0941176471);
+}
+
+.sectionProgressBar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.sectionProgressBar .progressBarContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  height: 25px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
+  box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
+}
+.sectionProgressBar .progressBarContainer .progressBarIlustration {
+  width: 70%;
+  background-color: #dddddd;
+  height: 15px;
+  border-radius: 20px;
+}
+.sectionProgressBar .progressBarContainer .progressBarIlustration .progressBarVisual {
+  height: 15px;
+  width: 40%;
+  background-color: #19A29A;
+  border-radius: 20px;
+}
+
+.sectionPresentacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 3rem;
+  cursor: default;
+}
+.sectionPresentacion .divPresentacionTexto {
+  margin: 0rem 1.5rem 7rem 0rem;
+}
+.sectionPresentacion .divPresentacionTexto h2 {
+  font-weight: 450;
+  font-size: 2.6rem;
+  margin: 1rem 0rem;
+  color: #19A29A;
+}
+.sectionPresentacion .divPresentacionTexto h3 {
+  color: #3d3d3d;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 1rem 0rem;
+}
+@keyframes animacion_porcentaje {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.sectionPresentacion .divPresentacionTexto .presentacionDescuento {
+  color: #19A29A;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sectionPresentacion .divPresentacionTexto .presentacionDescuento .desc1 {
+  animation-name: animacion_porcentaje;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 14s;
+  font-style: italic;
+  font-weight: 600;
+  position: relative;
+  top: 80px;
+}
+.sectionPresentacion .divPresentacionTexto .presentacionDescuento .desc2 {
+  animation-name: animacion_porcentaje;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  top: 40px;
+  transition: 0.2s;
+}
+.sectionPresentacion .divPresentacionTexto .presentacionDescuento .desc3 {
+  animation-name: animacion_porcentaje;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 11s;
+  font-style: italic;
+  font-weight: 650;
+  font-size: 18px;
+  position: relative;
+  top: 20px;
+}
+.sectionPresentacion .divPresentacionTexto .presentacionDescuento .desc4 {
+  animation-name: animacion_porcentaje;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  top: 10px;
+  transition: 0.2s;
+}
+.sectionPresentacion .divPresentacionTexto .presentacionDescuento .desc5 {
+  animation-name: animacion_porcentaje;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 13s;
+  font-style: italic;
+  font-weight: 600;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  top: 20px;
+  transition: 0.2s;
+}
+.sectionPresentacion .divPresentacionImagenes {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 210px);
+  justify-content: center;
+  align-items: center;
+}
+.sectionPresentacion .divPresentacionImagenes .imgind {
+  width: 180px;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 102px -13px rgba(25, 162, 154, 0.09);
+  -moz-box-shadow: 0px 0px 102px -13px rgba(25, 162, 154, 0.09);
+  box-shadow: 0px 0px 102px -13px rgba(25, 162, 154, 0.09);
+}
+.sectionPresentacion .divPresentacionImagenes .imgind:hover {
+  width: 190px;
+  opacity: 120%;
+  border-radius: 15px;
+}
+
+@keyframes flecha_animacion {
+  15% {
+    position: relative;
+    left: 1px;
+  }
+  25% {
+    position: relative;
+    left: 2px;
+  }
+  50% {
+    position: relative;
+    left: 3px;
+  }
+  75% {
+    position: relative;
+    left: 2px;
+  }
+  100% {
+    position: relative;
+    left: 1px;
+  }
+}
+.titulos, .titulos2 {
+  margin: 2rem 0rem;
+  padding: 20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: rgb(25, 162, 154);
+  background: linear-gradient(90deg, rgba(25, 162, 154, 0.0116421569) 0%, rgba(25, 162, 154, 0.12) 50%, rgba(25, 162, 154, 0.0116421569) 100%);
+}
+.titulos .titulo, .titulos2 .titulo, .titulos2 .titulo2 {
+  text-align: center;
+  color: #3d3d3d;
+  font-size: 1.7rem;
+  margin: 0;
+}
+.titulos .descripciones, .titulos2 .descripciones, .titulos2 .descripciones2 {
+  text-align: center;
+  color: #19A29A;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.sectionComprar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 4rem 0rem 4rem;
+  color: #3d3d3d;
+  font-weight: 400;
+}
+.sectionComprar .divComprar {
+  margin: 0rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionComprar .divComprar .ListComprar {
+  text-align: center;
+  width: 25rem;
+  background-color: aqua;
+  margin: 0;
+  padding: 1rem;
+  list-style-type: none;
+  border-radius: 35px;
+  background: #ededed;
+  box-shadow: 11px 11px 23px #e1e1e1, -11px -11px 23px #f9f9f9;
+  transition: all 0.5s;
+}
+.sectionComprar .divComprar .ListComprar:hover {
+  transform: scale(1.02);
+  -webkit-box-shadow: 0px 0px 34px -13px rgba(24, 180, 170, 0.877);
+  -moz-box-shadow: 0px 0px 34px -13px rgb(26, 158, 149);
+  box-shadow: 0px 0px 34px -13px rgba(25, 179, 168, 0.822);
+}
+.sectionComprar .divComprar .ListComprar .imageSectCompra {
+  width: 25px;
+}
+.sectionComprar .divComprar .ListComprar .siguiente {
+  width: 40px;
+  rotate: 90deg;
+}
+.sectionComprar .divComprar .ListComprar .span1 {
+  border: 1px solid #19A29A;
+  display: inline-block;
+  position: relative;
+  width: 3rem;
+  border-radius: 40px;
+}
+.sectionComprar .divComprar .ListComprar .span2 {
+  margin: 1rem;
+  border: 1px solid #19A29A;
+  display: inline-block;
+  position: relative;
+  width: 16rem;
+  border-radius: 40px;
+}
+.sectionComprar .divComprar li {
+  padding: 0rem 3rem;
+  font-size: 18px;
+  color: #3d3d3d;
+}
+.sectionComprar .compraDirecta {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+.sectionComprar .compraDirecta .productCompraDirect {
+  margin: 1rem 1rem;
+  text-align: center;
+  width: 150px;
+  height: 190px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 34px -13px rgba(21, 110, 104, 0.57);
+  -moz-box-shadow: 0px 0px 34px -13px rgba(21, 110, 104, 0.57);
+  box-shadow: 0px 0px 34px -13px rgba(21, 110, 104, 0.57);
+  transition: 0.3s;
+}
+.sectionComprar .compraDirecta .productCompraDirect:hover {
+  -webkit-box-shadow: 0px 0px 34px -13px rgba(24, 180, 170, 0.877);
+  -moz-box-shadow: 0px 0px 34px -13px rgb(26, 158, 149);
+  box-shadow: 0px 0px 34px -13px rgba(25, 179, 168, 0.822);
+  transform: scale(1.02);
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  border: none;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect0, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect8, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect7, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect6, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect5, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect4, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect3, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect2, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .imgDinamicCompraDirect1 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .botonPrev {
+  position: absolute;
+  left: 1rem;
+  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 80px -30px rgb(25, 162, 154);
+  -moz-box-shadow: 0px 0px 80px -30px rgb(25, 162, 154);
+  box-shadow: 0px 0px 80px -30px rgb(25, 162, 154);
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .botonPrev:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .botonNext {
+  position: absolute;
+  right: 1rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 80px -30px rgb(25, 162, 154);
+  -moz-box-shadow: 0px 0px 80px -30px rgb(25, 162, 154);
+  box-shadow: 0px 0px 80px -30px rgb(25, 162, 154);
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta .botonNext:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .infoModalCompraDirecta .porcentajeDescuento {
+  color: #ffffff;
+  padding: 6px;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #19A29A;
+  border-radius: 90px 65px 90px 64px;
+  -webkit-border-radius: 91px 65px 90px 64px;
+  -moz-border-radius: 91px 65px 90px 64px;
+  -webkit-box-shadow: 0px 0px 33px 1px rgba(25, 162, 154, 0.5);
+  -moz-box-shadow: 0px 0px 33px 1px rgba(25, 162, 154, 0.5);
+  box-shadow: 0px 0px 33px 1px rgba(25, 162, 154, 0.5);
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .infoModalCompraDirecta .promocionModal {
+  font-style: italic;
+  font-size: 16px;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  color: #3d3d3d;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .infoModalCompraDirecta .imgModalDeco {
+  position: absolute;
+  top: 55%;
+  right: 12%;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .infoModalCompraDirecta .nameProduct {
+  margin: 0;
+  color: #3d3d3d;
+  font-size: 20px;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .materialProduct {
+  margin: 0;
+  color: #3d3d3d;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .partesProduct {
+  margin: 0;
+  color: #3d3d3d;
+  font-size: 12px;
+  font-weight: 400;
+}
+.sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .precioProduct, .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .precioProduct01 {
+  margin: 0;
+  color: #19A29A;
+  font-size: 20px;
+  font-weight: 500;
+}
+.sectionComprar .compraDirecta .productCompraDirect .divBtnCompraDirecta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionComprar .compraDirecta .productCompraDirect .divBtnCompraDirecta .btnModalAgregarCompraDirecta {
+  margin: 5px;
+  width: 90%;
+  background-color: #19A29A;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #19A29A;
+  padding: 0.2rem;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.sectionComprar .compraDirecta .productCompraDirect .divBtnCompraDirecta .btnModalAgregarCompraDirecta:hover {
+  color: #19A29A;
+  background-color: #dddddd;
+}
+.sectionComprar .compraDirecta .productCompraDirect .divBtnCompraDirecta .btnModalCerrarCompraDirecta {
+  background-color: #dbdbdb;
+  color: #3d3d3d;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.2rem;
+  width: 40%;
+  font-size: 12px;
+  transition: 0.3s;
+  background-color: rgba(177, 177, 177, 0.0745098039);
+}
+.sectionComprar .compraDirecta .productCompraDirect .divBtnCompraDirecta .btnModalCerrarCompraDirecta:hover {
+  background-color: rgba(177, 177, 177, 0.2274509804);
+}
+.sectionComprar .compraDirecta .linkCompraDirect {
+  color: #3d3d3d;
+  text-decoration: none;
+}
+.sectionComprar .compraDirecta .linkCompraDirect .imgCompraDirect {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.sectionComprar .compraDirecta .linkCompraDirect .textCompraDirect {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 350;
+  position: relative;
+  bottom: 35px;
+}
+.sectionComprar .compraDirecta .linkCompraDirect .buttonCompraDirect {
+  border: 2px solid #19A29A;
+  padding: 0.1rem 0rem;
+  width: 90%;
+  color: #19A29A;
+  background-color: #ffffff;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+  bottom: 33px;
+  transition: ease-in-out 0.2s;
+}
+.sectionComprar .compraDirecta .linkCompraDirect .buttonCompraDirect:hover {
+  background-color: rgba(25, 162, 153, 0.0941176471);
+}
+
+.AccesoProductosFlecha {
+  animation-name: flecha_animacion;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.buttonAccesoProductos {
+  color: #19A29A;
+  background: #ffffff;
+  padding: 0.3rem 4rem;
+  border: 2px solid #19A29A;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
+  transition: 0.3s;
+}
+.buttonAccesoProductos:hover {
+  background-color: rgba(25, 162, 153, 0.0941176471);
+}
+
+.sectionInformacion {
+  border-radius: 15px;
+  justify-content: space-around;
+  padding: 3rem;
+  align-items: center;
+  margin: 2rem 2rem 0rem 2rem;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 8.3333333333%, #169088 0 16.6666666667%, rgba(0, 0, 0, 0) 0 83.3333333333%, #169088 0 91.6666666667%, rgba(0, 0, 0, 0) 0), linear-gradient(45deg, #169088 8.3333333333%, rgba(0, 0, 0, 0) 0 16.6666666667%, #169088 0 25%, rgba(0, 0, 0, 0) 0 75%, #169088 0 83.3333333333%, rgba(0, 0, 0, 0) 0 91.6666666667%, #169088 0), linear-gradient(-45deg, rgba(0, 0, 0, 0) 8.3333333333%, #169088 0 16.6666666667%, rgba(0, 0, 0, 0) 0 83.3333333333%, #169088 0 91.6666666667%, rgba(0, 0, 0, 0) 0), linear-gradient(-45deg, #169088 8.3333333333%, rgba(0, 0, 0, 0) 0 16.6666666667%, #169088 0 25%, rgba(0, 0, 0, 0) 0 75%, #169088 0 83.3333333333%, rgba(0, 0, 0, 0) 0 91.6666666667%, #169088 0) #19a29a;
+  background-size: 52px 52px;
+  background-position: 0 0, 26px 26px;
+}
+.sectionInformacion .divSectionInformacion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion {
+  margin: 1rem 1rem;
+  text-align: center;
+  width: 250px;
+  height: 310px;
+  border-radius: 15px;
+  background-color: #ececec;
+  -webkit-box-shadow: 0px 0px 40px 19px rgba(12, 99, 93, 0.69);
+  -moz-box-shadow: 0px 0px 40px 19px rgba(12, 99, 93, 0.69);
+  box-shadow: 0px 0px 40px 19px rgba(12, 99, 93, 0.69);
+  transition: ease-in-out 0.3s;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion:hover {
+  scale: 1.03;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion .linkInformacion {
+  color: #19a29a;
+  text-decoration: none;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion .linkInformacion .imgInformacion {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion .linkInformacion .titleInformacion {
+  padding: 10px;
+  background-color: rgba(22, 144, 136, 0.1568627451);
+  font-weight: 500;
+  position: relative;
+  bottom: 60px;
+  border-radius: 10px;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion .linkInformacion .textInformacion {
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  bottom: 45px;
+}
+.sectionInformacion .divSectionInformacion .divAccesosInformacion .linkInformacion .textInformacion strong {
+  font-size: 16px;
+}
+.sectionInformacion .divSectionInformacionAdicionalImg {
+  display: none;
+  flex-direction: column;
+}
+.sectionInformacion .divSectionInformacionAdicionalImg .imgInfoAdicionalDeco {
+  width: 140px;
+  border-radius: 15px;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0px 0px 34px -13px rgba(21, 110, 104, 0.57);
+  -moz-box-shadow: 0px 0px 34px -13px rgba(21, 110, 104, 0.57);
+  box-shadow: 0px 0px 34px -13px rgba(21, 110, 104, 0.57);
+}
+
+.FooterSection {
+  margin-top: 2rem;
+  padding: 0;
+  -webkit-box-shadow: 0px -5px 38px -1px rgba(25, 162, 154, 0.28);
+  -moz-box-shadow: 0px -5px 38px -1px rgba(25, 162, 154, 0.28);
+  box-shadow: 0px -5px 38px -1px rgba(25, 162, 154, 0.28);
+  background: rgb(25, 162, 154);
+}
+.FooterSection .sectionFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 15rem;
+}
+.FooterSection .sectionFooter .footerOptions .imgFooter {
+  width: 130px;
+}
+.FooterSection .sectionFooter .footerOptions .footerOptionsText {
+  color: #ffffff;
+  margin: 5px;
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.sectionProveedor .infoTitles {
+  text-align: center;
+  font-size: 18px;
+}
+
+.detalleEnvios {
+  margin-top: 6rem;
+}
+.detalleEnvios .divSectionInformacionAdicional {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 210px);
+  justify-content: center;
+  margin: 0rem 8rem;
+  grid-template-areas: "zona1 zona2" "zona1 zona3";
+}
+.detalleEnvios .divSectionInformacionAdicional .direccion1 {
+  position: relative;
+  bottom: 24.5rem;
+  transform: rotate(220deg);
+}
+.detalleEnvios .divSectionInformacionAdicional .direccion2 {
+  position: relative;
+  bottom: 16.5rem;
+  right: 1.3rem;
+  transform: rotate(130deg);
+}
+.detalleEnvios .divSectionInformacionAdicional .direccion3 {
+  position: relative;
+  bottom: 18rem;
+  left: 66rem;
+  transform: scaleX(-1) rotate(250deg);
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1, .detalleEnvios .divSectionInformacionAdicional .zona3, .detalleEnvios .divSectionInformacionAdicional .zona2 {
+  position: relative;
+  top: 3rem;
+  margin: 1rem;
+  -webkit-box-shadow: 0px 0px 34px -13px rgba(24, 180, 170, 0.877);
+  -moz-box-shadow: 0px 0px 34px -13px rgb(26, 158, 149);
+  box-shadow: 0px 0px 34px -13px rgba(25, 179, 168, 0.822);
+  border-radius: 20px;
+  grid-area: zona1;
+  height: 60%;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1 .titleInfoAdicional, .detalleEnvios .divSectionInformacionAdicional .zona3 .titleInfoAdicional, .detalleEnvios .divSectionInformacionAdicional .zona2 .titleInfoAdicional {
+  font-size: 1.2rem;
+  color: #19A29A;
+  font-weight: 400;
+  text-align: center;
+  padding: 6px;
+  margin: 1rem 5rem;
+  border-top: 2px solid #19A29A;
+  border-bottom: 2px solid #169088;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1 .listInfoAdicional, .detalleEnvios .divSectionInformacionAdicional .zona3 .listInfoAdicional, .detalleEnvios .divSectionInformacionAdicional .zona2 .listInfoAdicional {
+  overflow-x: hidden;
+  list-style-type: none;
+  color: #3d3d3d;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1 .listInfoAdicional a, .detalleEnvios .divSectionInformacionAdicional .zona3 .listInfoAdicional a, .detalleEnvios .divSectionInformacionAdicional .zona2 .listInfoAdicional a {
+  text-decoration: none;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1 .listInfoAdicional .txtListRegalos, .detalleEnvios .divSectionInformacionAdicional .zona3 .listInfoAdicional .txtListRegalos, .detalleEnvios .divSectionInformacionAdicional .zona2 .listInfoAdicional .txtListRegalos {
+  font-weight: 400;
+  font-size: 13px;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1 .listInfoAdicional .listRegalos, .detalleEnvios .divSectionInformacionAdicional .zona3 .listInfoAdicional .listRegalos, .detalleEnvios .divSectionInformacionAdicional .zona2 .listInfoAdicional .listRegalos {
+  color: #19A29A;
+  font-weight: 500;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona1 .listInfoAdicional .listRegalos .imgListRegalos, .detalleEnvios .divSectionInformacionAdicional .zona3 .listInfoAdicional .listRegalos .imgListRegalos, .detalleEnvios .divSectionInformacionAdicional .zona2 .listInfoAdicional .listRegalos .imgListRegalos {
+  width: 25px;
+  margin: 5px 15px;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona2 {
+  grid-area: zona2;
+  height: 75%;
+  position: initial;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona2 .listRegalos {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 40%;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona3 {
+  grid-area: zona3;
+  height: 60%;
+  position: initial;
+}
+.detalleEnvios .divSectionInformacionAdicional .zona3 .listRegalos {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 40%;
+  padding-left: 2rem;
+}
+
+.titulos2 {
+  margin: 0rem 0rem;
+  position: relative;
+  top: 6rem;
+  background: rgb(25, 162, 154);
+  background: linear-gradient(90deg, rgba(25, 162, 154, 0.12) 0%, rgba(25, 162, 154, 0.0116421569) 100%);
+}
+.titulos2 .titulo2 {
+  position: relative;
+  right: 26rem;
+}
+.titulos2 .descripciones2 {
+  position: relative;
+  right: 13rem;
+}
+
+/*# sourceMappingURL=style.css.map */
