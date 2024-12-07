@@ -53,36 +53,53 @@ p {
 .navBar .sectionNavBar .divListNavBar .listNavBar .carrito:hover {
   cursor: pointer;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav {
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 10px;
   border: 1px solid #3d3d3d;
   margin: 5px;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .textCarritoVacioTitulos {
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn {
   color: #3d3d3d;
-  width: 100%;
   margin: 0rem 0.5rem;
   font-weight: 400;
   text-align: center;
   margin: 10px;
+  cursor: default;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .textCarritoVacioTitulos {
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:first-child {
+  width: 30%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-child(2) {
+  width: 10%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-child(3) {
+  width: 10%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-child(4), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-child(4), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-child(4), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-child(4), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-child(4), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-child(4) {
+  width: 20%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-child(5), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-child(5), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-child(5), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-child(5), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-child(5), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-child(5) {
+  width: 20%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-last-child(1), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-last-child(1), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-last-child(1), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-last-child(1), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-last-child(1), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-last-child(1) {
+  width: 10%;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn {
+  color: #612222;
+  width: 10%;
+  font-size: 0.8rem;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:hover, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:hover {
+  cursor: pointer;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .textCarritoVacioTitulos {
   font-weight: 500;
   font-size: 16px;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav {
-  border: none;
-  justify-content: center;
-}
-.navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav p {
-  font-size: 18px;
-  font-weight: 500;
-  color: #3d3d3d;
-}
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito {
+.navBar .sectionNavBar .divListNavBar .modalCarrito {
   background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 2rem;
@@ -99,14 +116,35 @@ p {
   box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
   transition: 0.3s;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito {
+.navBar .sectionNavBar .divListNavBar .modalCarrito .carritoConProductosNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+}
+.navBar .sectionNavBar .divListNavBar .modalCarrito .carritoConProductosNav p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d3d3d;
+  margin: 0px;
+  text-align: center;
+}
+.navBar .sectionNavBar .divListNavBar .modalCarrito .carritoConProductosNav #totalFinal {
+  font-size: 18px;
+  color: #3d3d3d;
+  margin: 0px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.navBar .sectionNavBar .divListNavBar .sectionCarrito {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   height: 100%;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnFinalizarCompra {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .btnFinalizarCompra {
   border: 2px solid #19A29A;
   padding: 0.2rem 1rem;
   width: 50%;
@@ -117,10 +155,10 @@ p {
   font-weight: 400;
   transition: ease-in-out 0.2s;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnFinalizarCompra:hover {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .btnFinalizarCompra:hover {
   background-color: rgba(25, 162, 153, 0.0941176471);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnCancelCar {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .btnCancelCar {
   background-color: #ffffff;
   color: rgba(61, 61, 61, 0.4509803922);
   border: none;
@@ -131,15 +169,15 @@ p {
   transition: 0.3s;
   background-color: rgba(177, 177, 177, 0.0745098039);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .btnCancelCar:hover {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .btnCancelCar:hover {
   background-color: rgba(177, 177, 177, 0.2274509804);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .carritoConProductos .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .modalCarrito .sectionCarrito .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .carritoConProductosNav .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosNav .modalCarrito .sectionCarrito .textCarritoVacioTitulos {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .textCarritoVacio, .navBar .sectionNavBar .divListNavBar .sectionCarrito .listNavBar .carritoConProductos .textCarritoVacioBtn, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .sectionCarrito .textCarritoVacioBtn, .navBar .sectionNavBar .divListNavBar .sectionCarrito .listNavBar .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .listNavBar .sectionCarrito .textCarritoVacioTitulos, .navBar .sectionNavBar .divListNavBar .sectionCarrito .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .sectionCarrito .textCarritoVacioBtn {
   color: rgba(61, 61, 61, 0.4509803922);
   font-weight: 400;
   font-size: 14px;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .findProducts {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .findProducts {
   background-color: #e1e1e1;
   padding: 5px 10px;
   color: #6b6b6b;
@@ -147,30 +185,30 @@ p {
   border-radius: 10px;
   transition: 0.3s;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .findProducts:hover {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .findProducts:hover {
   background-color: #d6d6d6;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalCarrito .sectionCarrito .findProducts .imgFindProducts {
+.navBar .sectionNavBar .divListNavBar .sectionCarrito .findProducts .imgFindProducts {
   width: 20px;
   transform: rotate(90deg);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .itemListNav {
+.navBar .sectionNavBar .itemListNav {
   color: #19A29A;
   font-size: 14px;
   font-weight: 450;
   margin: 0rem 1.5rem;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .itemListNav:hover {
+.navBar .sectionNavBar .itemListNav:hover {
   cursor: pointer;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .itemListNav .linkNavBar {
+.navBar .sectionNavBar .itemListNav .linkNavBar {
   color: #19A29A;
   text-decoration: none;
   font-size: 14px;
   font-weight: 450;
   margin: 0rem 1.5rem;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro {
+.navBar .sectionNavBar .modalRegistro {
   background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 2rem;
@@ -186,30 +224,30 @@ p {
   -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
   box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .textModal {
+.navBar .sectionNavBar .modalRegistro .textModal {
   color: #19A29A;
   font-weight: 400;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .arrowModal {
+.navBar .sectionNavBar .modalRegistro .arrowModal {
   position: absolute;
   right: 25.5rem;
   top: 7rem;
   transform: rotate(210deg);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .arrowModal .imgArrowModal {
+.navBar .sectionNavBar .modalRegistro .arrowModal .imgArrowModal {
   width: 40px;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .titleModalRegistro {
+.navBar .sectionNavBar .modalRegistro .titleModalRegistro {
   border-bottom: 2px solid #19A29A;
   border-top: 2px solid #19A29A;
   padding: 0.5rem;
   color: #3d3d3d;
   font-size: 18px;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro {
+.navBar .sectionNavBar .modalRegistro .divModalRegistro {
   margin: 1rem;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro .labelRegistro {
+.navBar .sectionNavBar .modalRegistro .divModalRegistro .labelRegistro {
   color: #3d3d3d;
   display: flex;
   flex-wrap: wrap;
@@ -220,19 +258,19 @@ p {
   width: 100%;
   border-radius: 10px;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro .labelRegistro .inputRegistro, .navBar .sectionNavBar .divListNavBar .listNavBar .modalRegistro .divModalRegistro .labelRegistro #why {
+.navBar .sectionNavBar .modalRegistro .divModalRegistro .labelRegistro .inputRegistro, .navBar .sectionNavBar .modalRegistro .divModalRegistro .labelRegistro #why {
   border: none;
   border-radius: 10px;
   padding: 5px 20px;
   background-color: rgba(25, 162, 153, 0.0941176471);
   width: 60%;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton {
+.navBar .sectionNavBar .divModalButton {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalRegistro {
+.navBar .sectionNavBar .divModalButton .buttonModalRegistro {
   width: 50%;
   padding: 5px;
   color: #ffffff;
@@ -244,10 +282,10 @@ p {
   box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
   transition: 0.3s;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalRegistro:hover {
+.navBar .sectionNavBar .divModalButton .buttonModalRegistro:hover {
   background-color: rgba(25, 162, 153, 0.8);
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalCancel {
+.navBar .sectionNavBar .divModalButton .buttonModalCancel {
   width: 30%;
   padding: 3px;
   color: #3d3d3d;
@@ -259,7 +297,7 @@ p {
   box-shadow: 0px 0px 10px 0px rgba(25, 162, 154, 0.3);
   transition: 0.3s;
 }
-.navBar .sectionNavBar .divListNavBar .listNavBar .divModalButton .buttonModalCancel:hover {
+.navBar .sectionNavBar .divModalButton .buttonModalCancel:hover {
   background-color: rgba(25, 162, 153, 0.0941176471);
 }
 
