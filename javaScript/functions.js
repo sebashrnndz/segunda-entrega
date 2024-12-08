@@ -123,30 +123,106 @@ const productosIndividuales = [
     }
 ];
 
-const carrito = JSON.parse(localStorage.getItem("carrito"));
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const contenedor = document.getElementById("compraDirecta");
 
-// if (carrito == []) {
-//     productosDelCarrito.innerHTML = `
-//         <section class="sectionCarrito">
-//             <p class="textCarritoVacio">los productos que agregues al carrito se mostrarán acá</p>
-//                 <div>
-//                     <img class="imagenEncontrar" src="imagenes/encontrar.png" alt="encontrar">
-//                         <p class="textCarritoVacio">tu carrito está vacío</p>      
-//                 </div>
-//             <button id="cerrarCarrito" class="btnCancelCar">cerrar</button>
-//             `
-//             window.cerrarCarrito.addEventListener(`click`, () => {
-//                 window.carrito.close()
-//             });
-//         ;
-    
-// } else {};
 
-// const carrito =[];
+const productosDelCarrito = document.getElementById("carrito");
+
+function actualizarCarrito() {
+    productosDelCarrito.innerHTML = `
+        <div class="carritoConProductosNav">
+            <p>Total: </p>
+            <p id="totalFinal">$ </p>
+        </div>
+            <div class="carritoConProductos">
+                <p class="textCarritoVacioTitulos" >Producto</p>
+                <p class="textCarritoVacioTitulos" >Un(s)</p>
+                <p class="textCarritoVacioTitulos" >Descuento</p>
+                <p class="textCarritoVacioTitulos" >Precio</p>
+                <p class="textCarritoVacioTitulos">total</p>
+                <p class="textCarritoVacioTitulos">-</p>
+            </div>
+        `;
+
+    carrito.forEach(producto => {
+        productosDelCarrito.innerHTML += `
+            <div class="carritoConProductosAgregados">
+                <p class="textCarritoVacio">${producto.nombre}</p>
+                <p class="textCarritoVacio">${producto.cantidad}</p>
+                <p class="textCarritoVacio">${producto.descuento}</p>
+                <p class="textCarritoVacio">$${producto.precio}</p>
+                <p class="textCarritoVacio">$${producto.cantidad * producto.precio}</p>
+                <p id="deleteFromCar" class="textCarritoVacioBtn">eliminar</p>
+            </div>
+        `
+        eliminarProducto();
+        carritoVacio();
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        
+        
+        // para ocultar la seccion del carrito vacío
+        // const displayHide = document.querySelectorAll(".sectionCarrito");
+        // displayHide.forEach(element => {
+        //     element.style.display = "none";
+        // })
+    })
+    const totalFinal = document.getElementById("totalFinal");
+    totalFinal.innerText = "$ " + carrito.reduce((total, producto) => total + producto.cantidad * producto.precio, 0);
+
+
+    // calcular total
+};
+actualizarCarrito();
+
+function eliminarProducto() {
+    const btnDelete = document.getElementsByClassName("textCarritoVacioBtn")
+    const btnDeleteCar = Array.from(btnDelete)
+    
+    btnDeleteCar.forEach(boton => {
+        boton.addEventListener("click", (evento) => {
+            
+            let nombreId = evento.target.parentElement.children[0].innerText
+
+            // let estaEnCarrito = carrito.find(boton => boton.nombre == nombreId)
+
+                let index = carrito.findIndex(boton => boton.nombre == nombreId);
+                carrito.splice(index, 1);
+            
+            actualizarCarrito()
+            carritoVacio(); 
+        })
+        
+    }
+    
+)}
+function carritoVacio() {
+    const carritoVacioInner = document.getElementById("carrito")
+    console.log(carrito.length == 0 ? "vacio" : "no vacio")
+    if (carrito.length == 0) {
+        carritoVacioInner.innerHTML = `
+            <section class="sectionCarrito">
+                <p class="textCarritoVacio">los productos que agregues al carrito se mostrarán acá</p>
+                    <div>
+                        <img class="imagenEncontrar" src="imagenes/encontrar.png" alt="encontrar">
+                            <p class="textCarritoVacio">tu carrito está vacío</p>      
+                    </div>
+                <button id="cerrarCarrito" class="btnCancelCar">cerrar</button>
+                `
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                window.cerrarCarrito.addEventListener(`click`, () => {
+                    window.carrito.close()
+                });
+            ;
+            // actualizarCarrito();
+        
+    } else {};
+}
+carritoVacio();
+
 
 const añadirElemento = (cadaProducto) => {
-    productosIndividuales.innerHTML = "";
+    // productosIndividuales.innerHTML = "";
     cadaProducto.forEach(producto => {
         contenedor.innerHTML += `
         <div id="modalCompraDirecta${producto.id}" class="productCompraDirect linkCompraDirect">
@@ -190,6 +266,11 @@ const añadirElemento = (cadaProducto) => {
                     </dialog>
                     </div>
        `
+       const btnCls = document.getElementById("ClsCompraDirect" + producto.id)
+       btnCls.addEventListener(`click`, () => {
+        btnOpn.close();
+    });
+     
     });
 
 
@@ -197,16 +278,17 @@ const añadirElemento = (cadaProducto) => {
     cadaProducto.forEach(producto => {
         const abrirModal = document.getElementById("modalCompraDirecta" + producto.id)
         const btnOpn = document.getElementById("modalOpnCompraDirecta" + producto.id)
-        const btnCls = document.getElementById("ClsCompraDirect" + producto.id)
+        // const btnCls = document.getElementById("ClsCompraDirect" + producto.id)
 
 
         abrirModal.addEventListener(`click`, () => {
             btnOpn.showModal();
         });
+        // btnCls.addEventListener(`click`, () => {
+        //     btnOpn.close();
+        // });
 
-        btnCls.addEventListener(`click`, () => {
-            abrirModal.close();
-        });
+        
         const promocion = document.getElementById('promocion' + producto.id);
         const precio = document.getElementById('precioProducto' + producto.id);
         const porcentaje = producto.descuento;
@@ -222,6 +304,7 @@ const añadirElemento = (cadaProducto) => {
             precioConDescuento.textContent = calcularDescuento;
         };
         estructuraPromocion();
+       
 
         // CAROUSEL DE IMAGENES POR CADA PRODUCTO
         const images = document.querySelectorAll('.imgDinamicCompraDirect' + producto.id);
@@ -241,6 +324,8 @@ const añadirElemento = (cadaProducto) => {
         }
         prevBtn.addEventListener('click', () => changeImage(-1));
         nextBtn.addEventListener('click', () => changeImage(1));
+
+        
     })
     // LOGICA DEL CARRITO
 
@@ -264,80 +349,21 @@ const añadirElemento = (cadaProducto) => {
                     })
                 }
                 actualizarCarrito();
+                // carritoVacio();
             })
         })
+        
     };
+    
     agregarAlCarrito();
     
-    const productosDelCarrito = document.getElementById("carrito");
-
-
-    function actualizarCarrito() {
-
-
-        productosDelCarrito.innerHTML = `
-            <div class="carritoConProductosNav">
-                <p>Total: </p>
-                <p id="totalFinal">$ </p>
-            </div>
-                <div class="carritoConProductos">
-                    <p class="textCarritoVacioTitulos" >Producto</p>
-                    <p class="textCarritoVacioTitulos" >Un(s)</p>
-                    <p class="textCarritoVacioTitulos" >Descuento</p>
-                    <p class="textCarritoVacioTitulos" >Precio</p>
-                    <p class="textCarritoVacioTitulos">total</p>
-                    <p class="textCarritoVacioTitulos">-</p>
-                </div>
-            `;
-
-        carrito.forEach(producto => {
-            productosDelCarrito.innerHTML += `
-                <div class="carritoConProductosAgregados">
-                    <p class="textCarritoVacio">${producto.nombre}</p>
-                    <p class="textCarritoVacio">${producto.cantidad}</p>
-                    <p class="textCarritoVacio">${producto.descuento}</p>
-                    <p class="textCarritoVacio">$${producto.precio}</p>
-                    <p class="textCarritoVacio">$${producto.cantidad * producto.precio}</p>
-                    <p id="deleteFromCar" class="textCarritoVacioBtn">eliminar</p>
-                </div>
-            `
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            eliminarProducto();
-            
-            // para ocultar la seccion del carrito vacío
-            const displayHide = document.querySelectorAll(".sectionCarrito");
-            displayHide.forEach(element => {
-                element.style.display = "none";
-            })
-        })
-        const totalFinal = document.getElementById("totalFinal");
-        totalFinal.innerText = "$ " + carrito.reduce((total, producto) => total + producto.cantidad * producto.precio, 0);
-
-
-        // calcular total
-    };
-
-
-    function eliminarProducto() {
-        const btnDelete = document.getElementsByClassName("textCarritoVacioBtn")
-        const btnDeleteCar = Array.from(btnDelete)
-        
-        btnDeleteCar.forEach(boton => {
-            boton.addEventListener("click", (evento) => {
-                
-                let nombreId = evento.target.parentElement.children[0].innerText
     
-                let estaEnCarrito = carrito.find(boton => boton.nombre == nombreId)
 
-                    let index = carrito.findIndex(boton => boton.nombre == nombreId);
-                    carrito.splice(index, 1);
-                
-                actualizarCarrito()
-            })
-            
-        }
-        
-    )}
+
+
+
+
+    
    
     
     
@@ -346,6 +372,7 @@ const añadirElemento = (cadaProducto) => {
     // MODAL CARRITO
     window.accesoCarrito.addEventListener(`click`, () => {
         window.carrito.showModal()
+        
     });
 
     
