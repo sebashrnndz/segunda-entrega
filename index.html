@@ -51,19 +51,6 @@
                         <li id="accesoCarrito" class="itemListNav"><img class="carrito" src="imagenes/carrito.png"
                                 alt="carrito"></li>
                         <dialog id="carrito" class="modalCarrito">
-                            <!-- <section class="sectionCarrito">
-                                <p class="textCarritoVacio">los productos que agregues al carrito se mostrarán acá</p>
-                                <div>
-
-                                    <img class="imagenEncontrar" src="imagenes/encontrar.png" alt="encontrar">
-                                    <p class="textCarritoVacio">tu carrito está vacío</p>
-                                    <button class="findProducts">encontrar productos <img class="imgFindProducts"
-                                            src="imagenes/lupa.png" alt="lupa"></button>
-
-                                </div>
-
-
-                                <button id="cerrarCarrito" class="btnCancelCar">cerrar</button> -->
                         </dialog>
 
 
@@ -115,15 +102,19 @@
     <main>
         <section class="sectionProgressBar">
             <!-- DISPLAY NONE TEMPORAL -->
-            <div class="progressBarContainer" style="display: none;">
-                <p style="margin: 0px;">total:</p>
-                <p style="margin: 0px;" id="progressBarTotal">$0</p>
-                <div class="progressBarIlustration">
-
-                    <div class="progressBarVisual"></div>
+            <div class="progressBarContainer">
+                <p class="txtProgressBar" style="margin: 0px;">Total:</p>
+                <p class="txtProgressBar" style="margin: 0px;" id="progressBarTotal">$0</p>
+                <div id="progressBarIlustration" class="progressBarIlustration">
+                    <!-- <div class="progressBarVisual"></div> -->
                 </div>
             </div>
         </section>
+
+        <dialog id="modalFinalizarCompra" class="modalFinalizarCompra">
+        
+        </dialog>
+
 
 
         <!-- DISPLAY NONE TEMPORAL -->
@@ -515,7 +506,7 @@
             
         </section>
 
-
+        
 
 
 
@@ -654,6 +645,13 @@
                 <h4 class="infoTitles">¡inicia el chat con nosotros!</h4>
             </div>
         </section> -->
+      
+     
+          
+    
+
+
+
     </main>
 
 
@@ -681,13 +679,17 @@
                 <li class="footerOptionsText">capacitate para ser creador</li>
             </ul>
         </section>
+        
     </footer>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script> AOS.init(); </script>
 <script src="javaScript/functions.js"></script>
 
 </html>
+

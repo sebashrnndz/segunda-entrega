@@ -80,14 +80,15 @@ p {
                         font-weight: 400;
                         text-align: center;
                         margin: 10px;
-                        cursor:default;
+                        cursor: default;
 
                         &:first-child {
-                            width: 30%;
+                            width: 25%;
                         }
 
                         &:nth-child(2) {
-                            width: 10%;
+                            width: 15%;
+
                         }
 
                         &:nth-child(3) {
@@ -101,8 +102,9 @@ p {
                         &:nth-child(5) {
                             width: 20%;
                         }
+
                         &:nth-last-child(1) {
-                            width: 10%; 
+                            width: 10%;
                         }
                     }
 
@@ -112,7 +114,8 @@ p {
                         width: 10%;
                         font-size: 0.8rem
                     }
-                    .textCarritoVacioBtn:hover{
+
+                    .textCarritoVacioBtn:hover {
                         cursor: pointer;
                     }
                 }
@@ -122,13 +125,33 @@ p {
                     font-weight: 500;
                     font-size: 16px;
                 }
+
+                .addRemButton {
+                    width: 18px;
+                    // border: 0.5px solid #3d3d3d;
+                    padding: 0px;
+                    border-radius: 5px;
+                    background-color: #ececec;
+                    transition: all 0.3s;
+                    margin: 0px 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: #cccccc;
+                    }
+
+                    &:active {
+                        background: #a3a3a3;
+                        transition: none;
+                    }
+                }
             }
 
             .carritoConProductosAgregados {
                 @extend .carritoConProductos;
             }
 
-            
+
             .modalCarrito {
                 background-color: rgb(255, 255, 255);
                 text-align: center;
@@ -141,16 +164,18 @@ p {
                 border-radius: 20px;
                 border: none;
                 transform: translate(-50%, -50%);
-                -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-                -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-                box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+                // -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+                // -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+                // box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
                 transition: 0.3s;
-                .carritoConProductosNav{
+
+                .carritoConProductosNav {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     height: min-content;
+
                     p {
                         font-size: 16px;
                         font-weight: 400;
@@ -158,13 +183,31 @@ p {
                         margin: 0px;
                         text-align: center;
                     }
-                    #totalFinal{
+
+                    #totalFinal {
                         font-size: 18px;
                         color: #3d3d3d;
                         margin: 0px;
                         text-align: center;
                         margin-bottom: 1rem;
-                        
+                    }
+
+                    .confirmarCompra {
+                        margin: 5px;
+                        width: 40%;
+                        background-color: #19A29A;
+                        color: #ffffff;
+                        border-radius: 10px;
+                        border: 2px solid #19A29A;
+                        padding: 0.2rem;
+                        font-size: 14px;
+                        font-weight: 400;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: #19A29A;
+                            background-color: #dddddd;
+                        }
                     }
                 }
 
@@ -380,34 +423,44 @@ p {
 
 .sectionProgressBar {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    width: 90%;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    // margin-left: 2rem;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
 
     .progressBarContainer {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 45%;
+        width: 60%;
         height: 25px;
         background-color: #eeeeee;
-        border-radius: 20px;
-        // border: 2px solid #19A29A;
+        border-radius: 10px;
+        border: 2px solid #3d3d3d27;
+        padding: 1rem;
         -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 1);
         -moz-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 1);
         box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 1);
 
+        .txtProgressBar {
+            font-weight: 400;
+            color: #3d3d3d;
+            font-size: 16px;
+        }
+
         .progressBarIlustration {
-            width: 70%;
+            width: 80%;
             background-color: #dddddd;
-            height: 15px;
-            border-radius: 20px;
+            height: 20px;
+            border-radius: 5px;
 
             .progressBarVisual {
-                height: 15px;
-                width: 40%;
+                height: 20px;
+                max-width: 100%;
                 background-color: #19A29A;
                 border-radius: 20px;
 
@@ -562,6 +615,7 @@ p {
     }
 }
 
+
 @keyframes flecha_animacion {
     15% {
         position: relative;
@@ -586,6 +640,265 @@ p {
     100% {
         position: relative;
         left: 1px;
+    }
+}
+
+
+.modalFinalizarCompra {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    border: none;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 0px 37px -6px rgba(163, 163, 163, 1);
+    -moz-box-shadow: 0px 0px 37px -6px rgba(163, 163, 163, 1);
+    box-shadow: 0px 0px 37px -6px rgba(163, 163, 163, 1);
+
+    .titleTarjeta {
+        font-size: 20px;
+        color: #169088;
+        margin: 1rem;
+    }
+
+    .tituloSeleccion {
+        font-size: 14px;
+        color: #3d3d3d;
+        font-weight: 500;
+    }
+
+    .metodoPago {
+        .labelPago {
+            font-size: 14px;
+            width: 30%;
+
+            .selectTarjeta {
+                width: 100%;
+                border: none;
+                padding: 0.5rem 2rem;
+                border-radius: 10px;
+                background-color: #6b6b6b38;
+            }
+        }
+    }
+
+    .totalCompra {
+        font-size: 18px;
+        color: #3d3d3d;
+        font-weight: 500;
+    }
+
+    .segunSeleccion {
+
+        // margin: 2rem;
+        .infoTransf {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+
+        .infoDePagoCryptoResultCont {
+            margin: 0.5rem;
+
+            .infoDePagoCryptoResult {
+                // margin: 15rem;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 350;
+                margin: 1rem;
+                border-radius: 10px;
+                background-color: #a3a3a331;
+                padding: 0.5rem;
+
+                strong {
+                    font-weight: 450;
+                    // color: #3d3d3d;
+                }
+
+                .dolar {
+                    border-radius: 4px;
+                    padding: 4px;
+                    background-color: #6b6b6b1c;
+                    color: #19A29A;
+                }
+
+                .valorUSD {
+                    font-size: 13px;
+                    color: #19A29A;
+                    font-weight: 500;
+                }
+
+            }
+
+            .inputComprobante {
+                font-size: 12px;
+                border: none;
+                padding: 0.5rem 2rem;
+                border-radius: 10px;
+                background-color: #6b6b6b1f;
+                margin: 0.5rem
+            }
+
+            .txtComprobante {
+                font-size: 12px;
+            }
+
+            .buttonTarjeta {
+                // margin: 0.5rem 4rem;
+                width: 40%;
+                background-color: #19A29A;
+                color: #ffffff;
+                border-radius: 10px;
+                border: 2px solid #19A29A;
+                padding: 0.2rem;
+                font-size: 14px;
+                font-weight: 400;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #19A29A;
+                    background-color: #dddddd;
+                }
+            }
+        }
+
+        .labelCrypto {
+            font-size: 14px;
+            width: 30%;
+
+            .selectCrypto {
+                width: 100%;
+                border: none;
+                padding: 0.5rem 2rem;
+                border-radius: 10px;
+                background-color: #6b6b6b38;
+                margin-top: 0.5rem;
+            }
+        }
+
+        .contenedorPagoCrypto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .inputsPagoCryptoCont {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .inputsPagoCrypto {
+                    width: 90%;
+                    margin: 0.5rem;
+
+                    .inputDireccionCrypto {
+                        font-size: 12px;
+                        margin: 0.5rem;
+                        width: 90%;
+                        border: none;
+                        padding: 0.5rem 2rem;
+                        border-radius: 10px;
+                        background-color: #6b6b6b38;
+                    }
+                }
+            }
+
+            .infoDePagoCryptoCont {
+                border: 10px;
+                width: 80%;
+                display: block;
+                justify-content: center;
+                align-items: center;
+
+                .infoDePagoCrypto {
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 350;
+                    margin: 0;
+                    border-radius: 10px;
+                    background-color: #a3a3a331;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .seccionPagoTarjeta {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+        .contenedorPagoTarjeta {
+            // display: flex;
+            // justify-content: space-around;
+            // width: 100%;
+            // height: 100%;
+            // flex-direction: column;
+
+            p {
+                text-align: left;
+                font-size: 16px;
+                color: #169088;
+                font-weight: 400;
+                margin: 0rem;
+                border-top: 1px solid #3d3d3d;
+            }
+
+            .buttonTarjeta {
+                margin: 0.5rem 4rem;
+                width: 40%;
+                background-color: #19A29A;
+                color: #ffffff;
+                border-radius: 10px;
+                border: 2px solid #19A29A;
+                padding: 0.2rem;
+                font-size: 14px;
+                font-weight: 400;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #19A29A;
+                    background-color: #dddddd;
+                }
+            }
+
+            .seccionesPagoTarjeta {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                width: 100%;
+                border-radius: 10px;
+                flex-wrap: wrap;
+
+                .inputsPagoTarjeta {
+                    font-size: 12px;
+                    margin: 1rem;
+                    padding: 0.3rem 0.3rem 0.3rem 3rem;
+                    border-radius: 10px;
+                    background-color: #6b6b6b38;
+                    width: 40%;
+
+                    .inputRegistro {
+                        font-size: 12px;
+                        padding: 5px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: #6b6b6b38;
+                        width: 65%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -722,9 +1035,9 @@ p {
                 border-radius: 20px;
                 border: none;
                 transform: translate(-50%, -50%);
-                -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-                -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-                box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+                -webkit-box-shadow: 0px 0px 37px -6px rgba(163, 163, 163, 1);
+                -moz-box-shadow: 0px 0px 37px -6px rgba(163, 163, 163, 1);
+                box-shadow: 0px 0px 37px -6px rgba(163, 163, 163, 1);
 
                 .divModalOpnCompraDirecta {
                     display: flex;

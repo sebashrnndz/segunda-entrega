@@ -70,10 +70,10 @@ p {
   cursor: default;
 }
 .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:first-child, .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:first-child {
-  width: 30%;
+  width: 25%;
 }
 .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-child(2), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-child(2) {
-  width: 10%;
+  width: 15%;
 }
 .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacio:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacio:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioTitulos:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioTitulos:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductos .textCarritoVacioBtn:nth-child(3), .navBar .sectionNavBar .divListNavBar .listNavBar .carritoConProductosAgregados .textCarritoVacioBtn:nth-child(3) {
   width: 10%;
@@ -99,6 +99,22 @@ p {
   font-weight: 500;
   font-size: 16px;
 }
+.navBar .sectionNavBar .divListNavBar .listNavBar .addRemButton {
+  width: 18px;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #ececec;
+  transition: all 0.3s;
+  margin: 0px 5px;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .addRemButton:hover {
+  cursor: pointer;
+  background: #cccccc;
+}
+.navBar .sectionNavBar .divListNavBar .listNavBar .addRemButton:active {
+  background: #a3a3a3;
+  transition: none;
+}
 .navBar .sectionNavBar .divListNavBar .modalCarrito {
   background-color: rgb(255, 255, 255);
   text-align: center;
@@ -111,9 +127,6 @@ p {
   border-radius: 20px;
   border: none;
   transform: translate(-50%, -50%);
-  -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-  -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-  box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
   transition: 0.3s;
 }
 .navBar .sectionNavBar .divListNavBar .modalCarrito .carritoConProductosNav {
@@ -136,6 +149,22 @@ p {
   margin: 0px;
   text-align: center;
   margin-bottom: 1rem;
+}
+.navBar .sectionNavBar .divListNavBar .modalCarrito .carritoConProductosNav .confirmarCompra {
+  margin: 5px;
+  width: 40%;
+  background-color: #19A29A;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #19A29A;
+  padding: 0.2rem;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.navBar .sectionNavBar .divListNavBar .modalCarrito .carritoConProductosNav .confirmarCompra:hover {
+  color: #19A29A;
+  background-color: #dddddd;
 }
 .navBar .sectionNavBar .divListNavBar .sectionCarrito {
   display: flex;
@@ -303,33 +332,42 @@ p {
 
 .sectionProgressBar {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  width: 90%;
-  margin-top: 2rem;
-  margin-left: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+  position: sticky;
+  top: 10px;
+  z-index: 1;
 }
 .sectionProgressBar .progressBarContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 45%;
+  width: 60%;
   height: 25px;
   background-color: #eeeeee;
-  border-radius: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(61, 61, 61, 0.1529411765);
+  padding: 1rem;
   -webkit-box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
   -moz-box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
   box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
 }
+.sectionProgressBar .progressBarContainer .txtProgressBar {
+  font-weight: 400;
+  color: #3d3d3d;
+  font-size: 16px;
+}
 .sectionProgressBar .progressBarContainer .progressBarIlustration {
-  width: 70%;
+  width: 80%;
   background-color: #dddddd;
-  height: 15px;
-  border-radius: 20px;
+  height: 20px;
+  border-radius: 5px;
 }
 .sectionProgressBar .progressBarContainer .progressBarIlustration .progressBarVisual {
-  height: 15px;
-  width: 40%;
+  height: 20px;
+  max-width: 100%;
   background-color: #19A29A;
   border-radius: 20px;
 }
@@ -477,6 +515,217 @@ p {
     left: 1px;
   }
 }
+.modalFinalizarCompra {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2rem;
+  position: fixed;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  border: none;
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 37px -6px rgb(163, 163, 163);
+  -moz-box-shadow: 0px 0px 37px -6px rgb(163, 163, 163);
+  box-shadow: 0px 0px 37px -6px rgb(163, 163, 163);
+}
+.modalFinalizarCompra .titleTarjeta {
+  font-size: 20px;
+  color: #169088;
+  margin: 1rem;
+}
+.modalFinalizarCompra .tituloSeleccion {
+  font-size: 14px;
+  color: #3d3d3d;
+  font-weight: 500;
+}
+.modalFinalizarCompra .metodoPago .labelPago {
+  font-size: 14px;
+  width: 30%;
+}
+.modalFinalizarCompra .metodoPago .labelPago .selectTarjeta {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.2196078431);
+}
+.modalFinalizarCompra .totalCompra {
+  font-size: 18px;
+  color: #3d3d3d;
+  font-weight: 500;
+}
+.modalFinalizarCompra .segunSeleccion .infoTransf {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont {
+  margin: 0.5rem;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .infoDePagoCryptoResult {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 350;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: rgba(163, 163, 163, 0.1921568627);
+  padding: 0.5rem;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .infoDePagoCryptoResult strong {
+  font-weight: 450;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .infoDePagoCryptoResult .dolar {
+  border-radius: 4px;
+  padding: 4px;
+  background-color: rgba(107, 107, 107, 0.1098039216);
+  color: #19A29A;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .infoDePagoCryptoResult .valorUSD {
+  font-size: 13px;
+  color: #19A29A;
+  font-weight: 500;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .inputComprobante {
+  font-size: 12px;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.1215686275);
+  margin: 0.5rem;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .txtComprobante {
+  font-size: 12px;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .buttonTarjeta {
+  width: 40%;
+  background-color: #19A29A;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #19A29A;
+  padding: 0.2rem;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.modalFinalizarCompra .segunSeleccion .infoDePagoCryptoResultCont .buttonTarjeta:hover {
+  color: #19A29A;
+  background-color: #dddddd;
+}
+.modalFinalizarCompra .segunSeleccion .labelCrypto {
+  font-size: 14px;
+  width: 30%;
+}
+.modalFinalizarCompra .segunSeleccion .labelCrypto .selectCrypto {
+  width: 100%;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.2196078431);
+  margin-top: 0.5rem;
+}
+.modalFinalizarCompra .segunSeleccion .contenedorPagoCrypto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modalFinalizarCompra .segunSeleccion .contenedorPagoCrypto .inputsPagoCryptoCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.modalFinalizarCompra .segunSeleccion .contenedorPagoCrypto .inputsPagoCryptoCont .inputsPagoCrypto {
+  width: 90%;
+  margin: 0.5rem;
+}
+.modalFinalizarCompra .segunSeleccion .contenedorPagoCrypto .inputsPagoCryptoCont .inputsPagoCrypto .inputDireccionCrypto {
+  font-size: 12px;
+  margin: 0.5rem;
+  width: 90%;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.2196078431);
+}
+.modalFinalizarCompra .segunSeleccion .contenedorPagoCrypto .infoDePagoCryptoCont {
+  border: 10px;
+  width: 80%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.modalFinalizarCompra .segunSeleccion .contenedorPagoCrypto .infoDePagoCryptoCont .infoDePagoCrypto {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 350;
+  margin: 0;
+  border-radius: 10px;
+  background-color: rgba(163, 163, 163, 0.1921568627);
+  padding: 0.5rem;
+}
+.modalFinalizarCompra .seccionPagoTarjeta {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta p {
+  text-align: left;
+  font-size: 16px;
+  color: #169088;
+  font-weight: 400;
+  margin: 0rem;
+  border-top: 1px solid #3d3d3d;
+}
+.modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .buttonTarjeta {
+  margin: 0.5rem 4rem;
+  width: 40%;
+  background-color: #19A29A;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #19A29A;
+  padding: 0.2rem;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .buttonTarjeta:hover {
+  color: #19A29A;
+  background-color: #dddddd;
+}
+.modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .seccionesPagoTarjeta {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .seccionesPagoTarjeta .inputsPagoTarjeta {
+  font-size: 12px;
+  margin: 1rem;
+  padding: 0.3rem 0.3rem 0.3rem 3rem;
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.2196078431);
+  width: 40%;
+}
+.modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .seccionesPagoTarjeta .inputsPagoTarjeta .inputRegistro, .modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .seccionesPagoTarjeta .inputsPagoTarjeta .navBar .sectionNavBar .modalRegistro .divModalRegistro .labelRegistro #why, .navBar .sectionNavBar .modalRegistro .divModalRegistro .labelRegistro .modalFinalizarCompra .seccionPagoTarjeta .contenedorPagoTarjeta .seccionesPagoTarjeta .inputsPagoTarjeta #why {
+  font-size: 12px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(107, 107, 107, 0.2196078431);
+  width: 65%;
+}
+
 .titulos, .titulos2 {
   margin: 2rem 0rem;
   padding: 20px;
@@ -593,9 +842,9 @@ p {
   border-radius: 20px;
   border: none;
   transform: translate(-50%, -50%);
-  -webkit-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-  -moz-box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
-  box-shadow: 0px 0px 300px 200px rgba(42, 128, 122, 0.38);
+  -webkit-box-shadow: 0px 0px 37px -6px rgb(163, 163, 163);
+  -moz-box-shadow: 0px 0px 37px -6px rgb(163, 163, 163);
+  box-shadow: 0px 0px 37px -6px rgb(163, 163, 163);
 }
 .sectionComprar .compraDirecta .productCompraDirect .modalOpnCompraDirecta .divModalOpnCompraDirecta {
   display: flex;
